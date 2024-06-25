@@ -27,6 +27,7 @@
 ![card info](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop02.png?raw=true)
 ![Form](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop03.png?raw=true)
 ![Form image 2](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop04.png?raw=true)
+![Form image result](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop05.png?raw=true)
 ![card movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile01.png?raw=true)
 ![card info movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile02.png?raw=true)
 ![form movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile03.png?raw=true)
