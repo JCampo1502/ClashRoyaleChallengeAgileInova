@@ -19,3 +19,11 @@
 - [x] Arreglo de objetos (mínimo con 10 elementos)
 - [x] Uso de favicon
 - [x] Uso de la propiedad `object-fit` en css
+
+## Resultados 📈
+
+### Web & Movile
+![card](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop01.png?raw=true)
+![card info](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop02.png?raw=true)
+![card movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile01.png?raw=true)
+![card info movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile02.png?raw=true)
