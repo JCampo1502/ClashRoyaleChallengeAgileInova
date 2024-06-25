@@ -14,11 +14,96 @@ export class App{
     }
 
     start(){
-        /* Elements */
-        const CharacterContainer = document.getElementById('character');    
+        /* Start behaviors */
+        this.#paginationAction();
+        this.#formActions();
+        
+    }
+    #formActions(){        
+        const CreationContainer = document.querySelector('.main__article--creator');
+        const OpenFormBtn = document.querySelector('.character__btn--create');
+        const CloseFormBtn = document.querySelector('.form__action--close');
+
+        //Open Modal 
+        OpenFormBtn.addEventListener('click', ()=>{
+            CreationContainer.classList.add('main__article--open')
+        })
+        CloseFormBtn.addEventListener('click', ()=>{
+            CreationContainer.classList.remove('main__article--open')
+        })
+
+        //switch image
+        document.getElementById('image').addEventListener(
+            'change',this.#updatePreviewImage.bind(this));
+
+        //Add character
+        document.getElementById('characterCreator').addEventListener(
+            'submit', this.#createNewCharacter.bind(this))
+    }
+
+    #getPreviewImageUrl(file){
+        const Render = new FileReader();
+        if(
+            !file || 
+            (
+                file.type !== 'image/jpeg' &&  
+                file.type !== 'image/png' && 
+                file.type !== 'image/jpg'
+            )
+        )throw new Error('invalid image format');
+        Render.readAsDataURL(file);
+        return new Promise((res, rej)=>{
+            Render.onload = ()=>res(Render.result);
+            Render.onerror = rej;
+        })
+    }
+
+    async #updatePreviewImage(e){        
+        const File =e?.target?.files[0];
+        const ImagePreview = document.querySelector('.character__image--creator');
+        const ImageUrl = await this.#getPreviewImageUrl(File);
+        ImagePreview.setAttribute('src',ImageUrl);
+    }
+
+    async #createNewCharacter(e){
+        const Form = document.getElementById('characterCreator');
+        const ImageFile = Form.image.files[0];
+        const Name = Form.name.value;
+        const Description = Form.description.value;
+        const NewCharacter = new Character();
+
+        e.preventDefault();
+
+        /* Start some validations */
+        if(
+            !Form || 
+            !Name || 
+            !Description || 
+            !ImageFile || 
+            Name === ''|| 
+            Description == ''
+        )return;
+
+        /* Set Character Parameters */
+        NewCharacter.name = Name;
+        NewCharacter.description = Description;
+        NewCharacter.imageUrl = await this.#getPreviewImageUrl(ImageFile);        
+        this.#characters.addNewCharacter(NewCharacter);
+
+        /* Clean up */
+        document.querySelector('.character__image--creator')
+            .setAttribute('src','./assets/default.png');
+
+        document.querySelector('.main__article--creator')
+            .classList.remove('main__article--open');
+
+        Form.reset();        
+    }
+    
+    #paginationAction(){
+        const CharacterContainer = document.getElementById('character');   
         const BtnPrev = document.querySelector('.character__btn--prev');
         const BtnNext = document.querySelector('.character__btn--next');   
-
         /* Functions */
         const ShowPrev = ()=>{
             const HasPrevious = this.#characters.previousCharacter;
@@ -41,7 +126,7 @@ export class App{
             //Update View
             this.updateView();            
         }
-        
+
         //Switch section Events
         document.querySelector('.character__name').addEventListener('click', 
             ()=>CharacterContainer.classList.add('character--info'))
@@ -52,7 +137,7 @@ export class App{
         //Change Page Events
         BtnPrev.addEventListener('click', ShowPrev.bind(this));
         BtnNext.addEventListener('click', ShowNext.bind(this));
-    }
+    }    
 
     updateView(){
         //Get current character        

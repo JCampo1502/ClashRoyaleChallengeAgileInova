@@ -14,18 +14,18 @@ export class Character{
     }
 
     /* Validate string input */
-    static ValidateTextInput(newValue = null, maxLength = 50){
+    static ValidateTextInput(newValue = null, maxLength = null){
         if(
             !newValue ||
             typeof(newValue) !== 'string' ||
             newValue === '' ||
-            newValue.length > maxLength
+            (maxLength && newValue.length > maxLength)
         )throw new Error('invalid field');
     }
 
     /* Name */
-    set name(newName){
-        Character.ValidateTextInput(newName);
+    set name(newName){        
+        Character.ValidateTextInput(newName, 50);
         this.#name=newName;
     }
     
@@ -46,8 +46,8 @@ export class Character{
     }
 
     /* Image Url */
-    set imageUrl(newImageUrl){
-        Character.ValidateTextInput(newImageUrl, 500)
+    set imageUrl(newImageUrl){        
+        Character.ValidateTextInput(newImageUrl)
         this.#imageUrl = newImageUrl;
     }
 

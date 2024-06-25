@@ -16,7 +16,8 @@ document.addEventListener('DOMContentLoaded',async ()=>{
 
     } catch (error) {
         /* Show Error */
-        alert(error);
+        console.error(error);
+        alert('Ups! ha ocurrido un error');
     }
 })
 

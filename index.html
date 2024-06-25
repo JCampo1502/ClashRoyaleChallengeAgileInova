@@ -13,17 +13,38 @@
 </head>
 <body>
     <main class="main">
-        <section class="main__container">
-            <section class="character" id="character">
+        <section class="main__section">
+            <article class="main__article main__article--character" id="character">
                 <div class="character__switch ">
                     <button class="character__btn character__btn--cancel ">volver</button>
                     <button class="character__btn character__btn--section character__btn--prev character__btn--disabled"><</button>
-                    <button class="character__btn character__btn--section character__btn--next">></button>
+                    <button class="character__btn character__btn--create">Crea tu heroe</button>
+                    <button class="character__btn character__btn--section character__btn--next">></button>                    
                 </div>
-                <h1 class="character__name"></h1>
-                <img  alt="character image" class="character__image">
-                <p class="character__description"></p>
-            </section>
+                <h1 class="character__name">Desconocido</h1>
+                <img  alt="character image" class="character__image" src="./assets/default.png">
+                <p class="character__description">Desconocido</p>
+            </article>
+            <article class="main__article main__article--creator">
+                <form class="form" id="characterCreator">                                        
+                    <label class="form__label form__label--name" for="name">
+                        <span class="form__text">Nombre del heroe</span>
+                        <input type="text" class="form__input" id="name" placeholder="Desconocido" maxlength="50" required autocomplete="off">
+                    </label>                    
+                    <label class="form__label form__label--file" for="image">
+                        <img class="character__image character__image--creator" src="./assets/default.png" alt="my own hero here">
+                        <input type="file" class="form__input form__input--file" required name="image" accept="image/jpeg, image/png, image/jpg" id="image" required>
+                    </label>
+                    <label class="form__label form__label--description" for="description">
+                        <span class="form__text">Descripcion</span>
+                        <textarea type="text" class="form__input form__input--large" maxlength="350" required id="description" placeholder="Historia" autocomplete="off"></textarea>
+                    </label>
+                    <div class="form__actions">
+                        <button type="reset" class="form__action form__action--close">Cancelar</button>
+                        <button type="submit" class="form__action form__action--save">Crear</button>
+                    </div>
+                </form>
+            </article>
         </section>
     </main>
 </body>
