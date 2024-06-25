@@ -4,13 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Clash Royale Challenge</title>
+    <link rel="shortcut icon" href="assets/FavIcon.png" type="image/png">
     <!-- css -->
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/styles.css">
     <!-- scripts -->
-     <script src="scripts/main.js" defer></script>
+     <script src="scripts/main.js" defer type="module"></script>
 </head>
 <body>
-    
+    <main class="main">
+        <section class="main__container">
+            <section class="character" id="character">
+                <div class="character__switch ">
+                    <button class="character__btn character__btn--cancel ">volver</button>
+                    <button class="character__btn character__btn--section character__btn--prev character__btn--disabled"><</button>
+                    <button class="character__btn character__btn--section character__btn--next">></button>
+                </div>
+                <h1 class="character__name"></h1>
+                <img  alt="character image" class="character__image">
+                <p class="character__description"></p>
+            </section>
+        </section>
+    </main>
 </body>
 </html>
