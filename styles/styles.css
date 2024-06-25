@@ -8,7 +8,7 @@
 
 :root{
     --font-size-lg:calc(1.2rem + 2vw);
-    --font-size-md:calc(.5rem + .6vw);
+    --font-size-md:calc(.8rem + .6vw);
     --font-size-sm:calc(1rem + .5vw);
     --white:#ffffff;
     --black: #09090f;
