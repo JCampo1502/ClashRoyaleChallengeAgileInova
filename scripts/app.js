@@ -10,10 +10,11 @@ export class App{
             .map(c => Character.createNewCharacter(c));//Create Objects
         //Set characters        
         this.#characters =  new CharacterCollection(StoredData);
-        this.updateView();
     }
-
+    
     start(){
+        this.updateView();
+        
         /* Start behaviors */
         this.#paginationAction();
         this.#formActions();
