@@ -1,10 +1,10 @@
-# Explorer Course Reto #1
+# Explorer Course Reto #1 🔥🔥🔥
 
-## Requerimientos Técnicos
+## Requerimientos Técnicos 🔧
 **Para el que el reto sea aprobado, es necesario que se evidencie la siguiente funcionalidad en el aplicativo:**
-- Se debe deshabilitar el botón de la izquierda cuando se visualice el primer personaje, así el usuario no puede retroceder más.
-- Se debe deshabilitar el botón de la derecha cuando se visualice el último personaje, así el usuario no puede avanza más.
-- Se debe poder el detalle de cada uno de los personajes de forma individual en otra interfaz al hacer "clic" en el botón con el nombre del mismo.
+- ⬅️ Se debe deshabilitar el botón de la izquierda cuando se visualice el primer personaje, así el usuario no puede retroceder más.
+- ➡️ Se debe deshabilitar el botón de la derecha cuando se visualice el último personaje, así el usuario no puede avanza más.
+- 🧐 Se debe poder el detalle de cada uno de los personajes de forma individual en otra interfaz al hacer "clic" en el botón con el nombre del mismo.
   
 ***Para que el reto esa aprobado, es necesario que se evidencie el uso de los siguientes elementos/conceptos dentro del aplicativo***
 - [x] `getElementById()`
@@ -25,5 +25,9 @@
 ### Web & Movile
 ![card](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop01.png?raw=true)
 ![card info](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop02.png?raw=true)
+![Form](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop03.png?raw=true)
+![Form image 2](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/desktop04.png?raw=true)
 ![card movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile01.png?raw=true)
 ![card info movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile02.png?raw=true)
+![form movile](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile03.png?raw=true)
+![form movile 2](https://github.com/JCampo1502/ClashRoyaleChallengeAgileInova/blob/main/images/movile04.png?raw=true)

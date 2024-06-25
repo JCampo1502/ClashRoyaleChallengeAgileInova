@@ -30,6 +30,8 @@ export class App{
         })
         CloseFormBtn.addEventListener('click', ()=>{
             CreationContainer.classList.remove('main__article--open')
+            document.querySelector('.character__image--creator')
+            .setAttribute('src','./assets/default.png');        
         })
 
         //switch image
