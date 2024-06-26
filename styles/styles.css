@@ -477,7 +477,7 @@
     }
 
     .character--info .character__btn--create{
-        position: static;
+        display: none;
     }
 
     .character--info{
