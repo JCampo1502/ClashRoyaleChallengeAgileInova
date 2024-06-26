@@ -29,6 +29,7 @@ export class CharacterCollection{
     addNewCharacter(newCharacter){
         this.#validateCharacter(newCharacter);
         this.#characters.push(newCharacter);
+        this.#currentIndex = this.#characters.length - 1;
         this.#pushCharacters();
     }
 

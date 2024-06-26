@@ -94,13 +94,17 @@ export class App{
         this.#characters.addNewCharacter(NewCharacter);
 
         /* Clean up */
+        /* Reset from */
+        Form.reset();        
         document.querySelector('.character__image--creator')
             .setAttribute('src','./assets/default.png');
-
+        /* close form */
         document.querySelector('.main__article--creator')
             .classList.remove('main__article--open');
-
-        Form.reset();        
+        /* set new character */
+        document.querySelector('.character__btn--next')
+            .classList.add('character__btn--disabled');
+        this.updateView();
     }
     
     #paginationAction(){
